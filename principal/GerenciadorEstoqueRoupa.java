@@ -1,4 +1,4 @@
-package view;
+package principal;
 
 // IMPORT COM ASTERISCO: Traz tudo o que estiver dentro da pasta model de uma só vez!
 import model.*;
