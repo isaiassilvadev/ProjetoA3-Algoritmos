@@ -1,5 +1,7 @@
+package model;
+
 public class RoupaFormal extends Roupa {
-    private String tipoTecido; // Ex: Seda, Linho, Algodão
+    private String tipoTecido;
 
     public RoupaFormal() {
         super();
@@ -12,4 +14,9 @@ public class RoupaFormal extends Roupa {
 
     public String getTipoTecido() { return tipoTecido; }
     public void setTipoTecido(String tipoTecido) { this.tipoTecido = tipoTecido; }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Tecido: " + tipoTecido;
+    }
 }
