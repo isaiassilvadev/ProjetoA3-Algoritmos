@@ -1,20 +1,21 @@
+package model;
+
 public class Roupa {
-    private static int contador = 1; // Controla o auto-incremento global [cite: 30, 66]
+    private static int contador = 1;
     
-    private int id; // ID obrigatório do tipo int [cite: 29]
+    private int id;
     private String nome;
     private String marca;
-    private String tamanho; // Ex: P, M, G
+    private String tamanho;
     private double preco;
     private String cor;
 
-    // Construtor padrão [cite: 33]
+    // Construtores
     public Roupa() {
     }
 
-    // Construtor com todos os atributos, EXCETO o id [cite: 34]
     public Roupa(String nome, String marca, String tamanho, double preco, String cor) {
-        this.id = contador++; // Incrementa automaticamente iniciando de 1 [cite: 30, 66]
+        this.id = contador++;
         this.nome = nome;
         this.marca = marca;
         this.tamanho = tamanho;
@@ -22,12 +23,11 @@ public class Roupa {
         this.cor = cor;
     }
 
-    // Construtor adicional apenas com ID (para pesquisa) [cite: 35, 36]
     public Roupa(int id) {
         this.id = id;
     }
 
-    // Getters e Setters para todos os atributos [cite: 32]
+    // Getters e Setters completos
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -45,4 +45,15 @@ public class Roupa {
 
     public String getCor() { return cor; }
     public void setCor(String cor) { this.cor = cor; }
+
+    // toString no final para simplificar a exibição
+    @Override
+    public String toString() {
+        return "ID: " + id + 
+               " | Peça: " + nome + 
+               " | Marca: " + marca + 
+               " | Tam: " + tamanho + 
+               " | Preço: R$ " + preco + 
+               " | Cor: " + cor;
+    }
 }
