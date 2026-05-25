@@ -1,7 +1,7 @@
 package model;
 
 public class RoupaMasculina extends Roupa {
-    private String tipoCorte; // Ex: Slim Fit, Regular, Extra Grande
+    private String tipoCorte;
 
     public RoupaMasculina() {
         super();
@@ -14,4 +14,9 @@ public class RoupaMasculina extends Roupa {
 
     public String getTipoCorte() { return tipoCorte; }
     public void setTipoCorte(String tipoCorte) { this.tipoCorte = tipoCorte; }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Corte: " + tipoCorte;
+    }
 }
